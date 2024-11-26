@@ -1,0 +1,182 @@
+:root {
+    --main-color: #14214B;
+    --sec-color: #1391FD;
+}
+
+body {
+    background-color: #14214B;
+    color: white;
+}
+
+.glow-line iconify-icon {
+    color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 50px 5px #1391FD;
+}
+
+.underline {
+    opacity: 1;
+    width: 7rem;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 25px 3px #1391FD;
+}
+
+/* navbar */
+.navbar {
+    background-color: #0b122f8b !important;
+}
+
+a.nav-link {
+    color: white !important;
+    font-size: large;
+}
+
+a.nav-link:hover {
+    text-shadow: 0px 0px 10px var(--sec-color)
+}
+
+
+.top-img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.header {
+    margin: 10%;
+    margin-bottom: 20%;
+    color: var(--main-color);
+}
+
+.header h1 {
+    font-size: 5rem;
+}
+
+section {
+    padding: 75px 0;
+}
+
+
+.squares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+}
+
+.squares .square-text {
+    position: absolute;
+}
+
+/* .values .value {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/diamond.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+}
+.values h2{
+    font-size: 4.5rem;
+}
+.values p{
+    font-size: 2rem;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    position: relative;
+    height: 80vh;
+    background-image: url(../imgs/aboutus-footer.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+}
+
+.footer iconify-icon {
+    color: var(--sec-color);
+}
+
+.footer h3 {
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+}
+
+.footer .title-dash {
+    opacity: 1;
+    margin-left: 35px;
+    color: var(--sec-color);
+    width: 4.5rem;
+    border: 2px solid var(--sec-color);
+    border-radius: 5px;
+}
+
+.footer .white-line {
+    opacity: 1;
+    justify-self: center;
+    width: 75%;
+    color: white;
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+.footer img {
+    width: 4rem;
+}
+
+footer .icons span {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px lightblue;
+}
+
+footer .icons span:hover {
+    border: 2px solid var(--sec-color);
+}
+
+.footer .icons iconify-icon {
+    color: white;
+}

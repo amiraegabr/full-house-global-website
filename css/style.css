@@ -1,0 +1,518 @@
+:root {
+    --main-color: #14214B;
+    --sec-color: #1391FD;
+}
+
+section {
+    padding: 75px 0;
+}
+
+.min-vh-90 {
+    min-height: 90vh;
+    /* Set minimum height to 90% of the viewport height */
+}
+
+.glow {
+    /* option1 */
+    /* color: var(--sec-color);
+    -webkit-text-stroke: 0.5px white ; */
+    /* option2 */
+    color: white;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--sec-color), 0 0 40px var(--sec-color), 0 0 50px var(--sec-color), 0 0 60px var(--sec-color), 0 0 70px var(--sec-color);
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px var(--sec-color), 0 0 40px var(--sec-color), 0 0 50px var(--sec-color), 0 0 60px var(--sec-color), 0 0 70px var(--sec-color), 0 0 80px var(--sec-color);
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+/* From Uiverse.io by niat786 */
+button {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(20deg, #14214B, #1391FD);
+    border-radius: 8px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.8em 1.7em;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 #05bada66;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
+
+.glow-line iconify-icon {
+    color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 50px 5px #1391FD;
+}
+
+.underline {
+    opacity: 1;
+    width: 7.5rem;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 25px 3px #1391FD;
+}
+
+
+/* navbar */
+.navbar {
+    background-color: #0b122f8b !important;
+}
+
+a.nav-link {
+    color: white !important;
+    font-size: large;
+}
+
+a.nav-link:hover {
+    text-shadow: 0px 0px 10px var(--sec-color)
+}
+
+
+
+/* header */
+header {
+    background-color: var(--main-color);
+    background-image: url('../imgs/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 50px;
+}
+
+header h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+header .wave {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* about section */
+
+#about .icons span {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px lightblue;
+}
+
+
+#about .icons span:hover {
+    border: 2px solid var(--sec-color);
+    color: var(--sec-color);
+}
+
+#about a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about a:hover {
+    color: var(--sec-color);
+}
+
+/* services section */
+#services {
+    background-color: var(--main-color);
+    color: white;
+    position: relative;
+}
+
+#services a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#services .wave {
+    position: absolute;
+    top: -1rem;
+}
+
+#services .heading h2 {
+    font-size: 4rem;
+}
+
+#services .service .overlay {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#services .service .overlay:hover {
+    color: lightblue;
+    text-shadow: 0px 0px 5px var(--sec-color);
+}
+
+
+
+/* slider section */
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 30px 0;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 10s slider infinite linear;
+}
+
+.logos-slide img {
+    margin: 0 40px;
+    height: 6.25rem;
+}
+
+/* animation */
+@keyframes slider {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+/* stats section */
+#stats {
+    background-image: url("../imgs/stats-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+#stats h2 {
+    font-size: 3rem;
+}
+
+#video h2 {
+    font-size: 3.5rem;
+
+}
+
+#video h3 {
+    font-size: 3.5rem;
+
+}
+
+/* Video gallery */
+
+/* .our-videos .videos-left-dec img {
+    width: 220px;
+    height: 471px;
+    left: 0;
+    top: 120px;
+    position: absolute;
+}
+  
+.our-videos .videos-right-dec img {
+    width: 730px;
+    height: 523px;
+    right: 0;
+    top: 45px;
+    position: absolute;
+} */
+
+.our-videos {
+    position: relative;
+    padding: 60px 0;
+}
+
+.our-videos .naccs {
+    position: relative;
+}
+
+.our-videos .naccs .menu div {
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-videos .naccs .menu div {
+    transition: all 0.3s;
+}
+
+.our-videos .naccs .menu div.active .thumb .inner-content {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+}
+
+.our-videos .naccs .menu div.active .thumb .inner-content h4 {
+    top: 40%;
+    transform: translateY(-55%);
+    position: relative;
+}
+
+.our-videos .naccs .menu div.active .thumb .inner-content span {
+    display: block;
+    position: relative;
+    top: 55%;
+    transform: translateY(-55%);
+}
+
+.our-videos ul.nacc {
+    position: relative;
+    min-height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-videos ul.nacc li {
+    opacity: 0;
+    transform: translateX(-50px);
+    position: absolute;
+    list-style: none;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-videos ul.nacc li.active {
+    transition-delay: 0.3s;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.our-videos ul.nacc li {
+    width: 100%;
+}
+
+.our-videos .nacc .thumb {
+    position: relative;
+    border-radius: 23px;
+}
+
+.our-videos .nacc .thumb iframe {
+    border-radius: 23px;
+    height: 675px;
+}
+
+.our-videos .nacc .thumb .overlay-effect {
+    background: var(--sec-color);
+    background: linear-gradient(105deg, var(--main-color) 0%, var(--sec-color) 100%);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.our-videos .nacc .thumb .overlay-effect h4 {
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.our-videos .nacc .thumb .overlay-effect span {
+    font-size: 15px;
+    color: #fff;
+}
+
+.our-videos .menu .thumb {
+    position: relative;
+}
+
+.our-videos .menu .thumb .inner-content {
+    background: var(--sec-color);
+    background: linear-gradient(105deg, var(--main-color) 0%, var(--sec-color) 100%);
+    border-top-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 30px;
+    transition: all 0.3s;
+}
+
+.our-videos .menu .thumb .inner-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.our-videos .menu .thumb .inner-content span {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    display: none;
+    transition: all 0.3s;
+}
+
+
+/* testimonials */
+#testimonial {
+    background-color: var(--main-color);
+    color: white;
+    position: relative;
+}
+
+#testimonial .wave {
+    position: absolute;
+    top: -2rem;
+}
+
+#testimonial .d-wave {
+    position: absolute;
+    bottom: 0;
+}
+
+#testimonial h2 {
+    font-size: 4rem;
+}
+
+.testimonial-carousel .testimonial-item {
+    color: black;
+    padding: 30px;
+    border-radius: 8px;
+
+}
+
+.testimonial-item .qicon {
+    position: absolute;
+    top: -35px;
+    left: 5%;
+    color: #1391FD;
+}
+
+
+/* footer */
+footer {
+    position: relative;
+    height: 80vh;
+    background-image: url(../imgs/footer\ bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+}
+
+.footer iconify-icon {
+    color: var(--sec-color);
+}
+
+.footer h3 {
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+}
+
+.footer .title-dash {
+    opacity: 1;
+    margin-left: 35px;
+    color: var(--sec-color);
+    width: 4.5rem;
+    border: 2px solid var(--sec-color);
+    border-radius: 5px;
+}
+
+
+.footer .white-line {
+    opacity: 1;
+    justify-self: center;
+    width: 75%;
+    color: white;
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+.footer img {
+    width: 4rem;
+}
+
+footer .icons span {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px lightblue;
+}
+
+footer .icons span:hover {
+    border: 2px solid var(--sec-color);
+}
+
+.footer .icons iconify-icon {
+    color: white;
+}
