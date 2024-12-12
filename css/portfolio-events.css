@@ -130,6 +130,20 @@ a.nav-link:hover {
     border-radius: 1rem;
 }
 
+.event-images{
+    line-height: 0;       
+    column-count: 3;    
+     /* column-gap: 10px; */
+
+    display:inline-block;  
+
+}
+
+.event-images img, video{
+    border-radius: 1rem;
+    margin: 10px;
+
+}
 
 
 /* footer */
