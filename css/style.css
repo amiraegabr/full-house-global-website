@@ -2,6 +2,9 @@
     --main-color: #14214B;
     --sec-color: #1391FD;
 }
+* {
+    box-sizing: border-box;
+}
 
 section {
     padding: 75px 0;
@@ -9,7 +12,6 @@ section {
 
 .min-vh-90 {
     min-height: 90vh;
-    /* Set minimum height to 90% of the viewport height */
 }
 
 .glow {
@@ -120,16 +122,18 @@ header h1 {
 
 header .wave {
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     right: 0;
 }
 
 
 /* about section */
-
+#about{
+    padding: 0;
+}
 #about .icons span {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     display: inline-block;
     border: 2px solid var(--main-color);
     border-radius: 50%;
@@ -140,7 +144,6 @@ header .wave {
     cursor: pointer;
     box-shadow: 3px 3px 5px lightblue;
 }
-
 
 #about .icons span:hover {
     border: 2px solid var(--sec-color);
@@ -157,6 +160,15 @@ header .wave {
 
 #about a:hover {
     color: var(--sec-color);
+}
+
+#about .value{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#about img{
+    border-radius: 48px;
 }
 
 /* services section */
@@ -200,7 +212,8 @@ header .wave {
 .logos {
     overflow: hidden;
     white-space: nowrap;
-    padding: 30px 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .logos:hover .logos-slide {
@@ -209,7 +222,7 @@ header .wave {
 
 .logos-slide {
     display: inline-block;
-    animation: 10s slider infinite linear;
+    animation: 20s slider infinite linear;
 }
 
 .logos-slide img {
@@ -253,22 +266,6 @@ header .wave {
 }
 
 /* Video gallery */
-
-/* .our-videos .videos-left-dec img {
-    width: 220px;
-    height: 471px;
-    left: 0;
-    top: 120px;
-    position: absolute;
-}
-  
-.our-videos .videos-right-dec img {
-    width: 730px;
-    height: 523px;
-    right: 0;
-    top: 45px;
-    position: absolute;
-} */
 
 .our-videos {
     position: relative;
@@ -417,12 +414,12 @@ header .wave {
 
 #testimonial .wave {
     position: absolute;
-    top: -2rem;
+    top: -1rem;
 }
 
 #testimonial .d-wave {
     position: absolute;
-    bottom: 0;
+    bottom: -1%;
 }
 
 #testimonial h2 {
@@ -447,33 +444,26 @@ header .wave {
 /* footer */
 footer {
     position: relative;
-    height: 80vh;
+    /* height: 80vh; */
     background-image: url(../imgs/footer\ bg.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
     color: white;
+    padding-top: 20rem;
 }
 
-.footer iconify-icon {
+footer iconify-icon {
     color: var(--sec-color);
 }
 
-.footer h3 {
+footer h3 {
     position: absolute;
     left: 35px;
     bottom: 0;
 }
 
-.footer .title-dash {
+footer .title-dash {
     opacity: 1;
     margin-left: 35px;
     color: var(--sec-color);
@@ -483,7 +473,7 @@ footer {
 }
 
 
-.footer .white-line {
+footer .white-line {
     opacity: 1;
     justify-self: center;
     width: 75%;
@@ -491,7 +481,7 @@ footer {
     box-shadow: 0px 0px 10px 2px white;
 }
 
-.footer img {
+footer img {
     width: 4rem;
 }
 
@@ -515,4 +505,61 @@ footer .icons span:hover {
 
 .footer .icons iconify-icon {
     color: white;
+}
+
+@media ( max-width: 480px) {
+ 
+    section {
+        padding: 40px 0;
+    }
+
+    .underline {
+        width: 3rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header h3 {
+        font-size: 1.2rem;
+    }
+    .landing-caption {
+        padding: 1rem;
+    }
+    header .wave{
+        bottom: 4%;
+    }
+    .about-img{
+        display: none;
+    }
+    .about-content{
+        width: 100%;
+    }
+    #about .icons{
+        gap: 2rem;
+    }
+
+    #video h2{
+        font-size: 2.5rem;
+    }
+    #video .glow-line {
+        display: none !important;
+    }
+
+    #testimonial h2{
+        font-size: 2.5rem;
+    }
+
+    .testimonial-carousel {
+        flex-direction: column;
+    }
+    .testimonial-item {
+        margin: 1rem auto;
+    }
+
+    footer{
+        padding-top: 10rem;
+    }
+
+
 }

@@ -131,10 +131,55 @@ footer .icons span:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+.service-image {
+    width: 100%;
+    display: block;
 }
 .service h3{
     text-shadow: 0px 0px 10px var(--sec-color);
 }
 .service .overlay{
     width: 80%;
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center; /* Center text */
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Space between icon and text */
+}
+
+.description {
+    max-width: 600px; /* Optional: Limit width of description */
+}
+
+/* @media (max-width: 770px) {
+    .service-image{
+        rotate: 90deg;
+    }
+    .content{
+        flex-direction: column;
+    }
+} */

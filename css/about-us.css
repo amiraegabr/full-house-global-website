@@ -7,6 +7,9 @@ body {
     background-color: #14214B;
     color: white;
 }
+section{
+    padding: 5% 0;
+}
 
 .glow-line iconify-icon {
     color: white;
@@ -72,43 +75,39 @@ section {
     position: absolute;
 }
 
-/* .values .value {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+.image-container {
+    position: relative;
+
+}
+
+.about-img1{
+    /* display: block; */
+    width: auto; 
+    height: auto;
+  
+}
+.about-img2{
+    position: absolute;
+    bottom: -220px;
+    left: -75px;
+    width: auto; 
+    height: auto;
+}
+
+
+/* .values{
+    position: relative;
+} */
+.value{
+    position: relative;
+    display:flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../imgs/diamond.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 50%;
 }
-.values h2{
-    font-size: 4.5rem;
+.value img{
+    position: absolute;
+    bottom: -900%;
 }
-.values p{
-    font-size: 2rem;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* footer */
 footer {
@@ -179,4 +178,21 @@ footer .icons span:hover {
 
 .footer .icons iconify-icon {
     color: white;
+}
+
+@media ( max-width: 480px) {
+    
+    .top-img{
+        width:max-content;
+    }
+    
+    .glow-line {
+        /* display: none !important; */
+        width: 3rem;
+    }
+
+    .about-imgs{
+        display: none !important;
+    }
+
 }
