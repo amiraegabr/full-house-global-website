@@ -1,0 +1,232 @@
+:root {
+    --main-color: #14214B;
+    --sec-color: #1391FD;
+}
+
+.glow {
+    color: #fff;
+    stroke: var(--main-color);
+    stroke-width: 5px;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--sec-color), 0 0 40px var(--sec-color), 0 0 50px var(--sec-color), 0 0 60px var(--sec-color), 0 0 70px var(--sec-color);
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px var(--sec-color), 0 0 40px var(--sec-color), 0 0 50px var(--sec-color), 0 0 60px var(--sec-color), 0 0 70px var(--sec-color), 0 0 80px var(--sec-color);
+    }
+}
+
+.glow-line iconify-icon {
+    color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 50px 5px #1391FD;
+}
+
+.underline {
+    opacity: 1;
+    width: 7rem;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 25px 3px #1391FD;
+}
+
+/* navbar */
+.navbar {
+    background-color: #0b122f8b !important;
+}
+
+a.nav-link {
+    color: white !important;
+    font-size: large;
+}
+
+a.nav-link:hover {
+    text-shadow: 0px 0px 10px var(--sec-color)
+}
+
+.top-img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.back-button {
+    top: 15%;
+    left: 3%;
+    color: white;
+}
+
+.header {
+    padding: 10% 0;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 4rem;
+}
+
+.header h3 {
+    font-size: 2rem;
+}
+
+/* footer */
+footer {
+    position: relative;
+    height: 80vh;
+    background-image: url(../imgs/footer\ bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+}
+
+.footer iconify-icon {
+    color: var(--sec-color);
+}
+
+.footer h3 {
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+}
+
+.footer .title-dash {
+    opacity: 1;
+    margin-left: 35px;
+    color: var(--sec-color);
+    width: 4.5rem;
+    border: 2px solid var(--sec-color);
+    border-radius: 5px;
+}
+
+.footer .white-line {
+    opacity: 1;
+    justify-self: center;
+    width: 75%;
+    color: white;
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+.footer img {
+    width: 4rem;
+}
+
+footer .icons span {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px lightblue;
+}
+
+footer .icons span:hover {
+    border: 2px solid var(--sec-color);
+}
+
+.footer .icons iconify-icon {
+    color: white;
+}
+
+
+/* @media (max-width: 770px) {
+    .service-image{
+        rotate: 90deg;
+    }
+    .content{
+        flex-direction: column;
+    }
+} */
+
+
+/* DELETE BUTTON  */
+.del{
+    border: none;
+}
+
+.del:hover{
+color: red;
+}
+
+/* add button  */
+.button {
+    margin: 30px auto;
+    --main-focus: #2d8cf0;
+    --font-color: #323232;
+    --bg-color-sub: #dedede;
+    --bg-color: #eee;
+    --main-color: #323232;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: var(--font-color);
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: var(--main-color);
+  }
+  
+  .button:hover {
+    background: var(--bg-color);
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+  }
