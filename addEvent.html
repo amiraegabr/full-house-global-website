@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Form</title>
+    <link rel="stylesheet" href="css/addEvent.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <form id="uploadForm">
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter a title" required>
+            </div>
+
+            <!-- Date Input -->
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+            <label for="company">company:</label>
+            <select id="imageDropdown" name="imageDropdown">
+                <option value="" disabled selected>Select company</option>
+                <option value="image1">Option 1</option>
+                <option value="image2">Option 2</option>
+            </select>
+            
+
+
+            
+                
+
+            <label for="category">Category:</label>
+            <select id="videoDropdown" name="videoDropdown">
+                <option value="" disabled selected>Select category</option>
+                <option value="video1">Option 1</option>
+                <option value="video2">Option 2</option>
+            </select>
+</div>
+
+            <!--  Image Upload -->
+            <div class="form-group">
+                <label for="imageUpload">Upload Images:</label>
+                <input type="file" id="imageUpload" accept="image/*" multiple onchange="previewImages()">
+                <div id="imagePreview" class="preview-container"></div>
+            </div>
+
+            <!--  Video Upload -->
+            <div class="form-group">
+                <label for="videoUpload">Upload Videos:</label>
+                <input type="file" id="videoUpload" accept="video/*" multiple onchange="previewVideos()">
+                <div id="videoPreview" class="preview-container"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="js/new.js"></script>
+</body>
+</html>
